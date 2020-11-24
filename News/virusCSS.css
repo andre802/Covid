@@ -1,0 +1,35 @@
+﻿body {
+    font-family: Arial;
+    background-color:darkgray;
+}
+
+h1.bigTitle {
+    color: darkorange;
+    margin-right: 2%;
+    text-align: center;
+    background-color: black;
+}
+
+h2.sTitle {
+    font-style: italic;
+}
+
+main table thead {
+    color: saddlebrown;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+th.onespace {
+    padding-right: 0%;
+    color: maroon;
+}
+
+
+td, th {
+    border-collapse: separate;
+    padding-left: 0%;
+    text-align: center;
+    text-decoration: none;
+    width: 5%;
+}

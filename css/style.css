@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 750px;
+    box-shadow: 10px 10px 10px black,
+    -10px -10px 15px black;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+nav {
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../News/picCOVIDlarge.jpg");
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid black;
+    font-size: 1.05em;
+    margin-bottom: 10px;
+}
+nav ul {
+    padding: 20px;
+    list-style-type: none;
+    float: right;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 4em;
+    font-weight: bold;
+    padding: 8px;
+}
+nav a {
+    text-decoration: none;
+    color: lightblue;
+    padding: 10px;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: purple;
+    background-color: gray;
+    border-radius: 5px;
+}
+nav a:active {
+    font-weight: bold;
+}
+#current {
+    text-decoration: underline;
+    color: orange;
+
+    font-size: 1.1em;
+}
+aside {
+    float: left;
+    min-width: 7%;
+    max-width: min-content;
+    padding: 15px;
+    line-height: 1.75em;
+    margin: .5em 1em 0 2em;
+    font-size: 125%;
+}
+aside li:hover {
+    font-size: 115%;
+}
+aside span {
+    color: red;
+    font-size: 130%;
+}
+main {
+    min-width: 30%;
+    width: 50%;
+    padding: 25px;
+    float: right;
+    margin-right: 6em;
+    border-radius: 5px;
+    border: 1px solid darkslategrey;
+    box-shadow: 5px 8px 10px gray,
+     -20px -10px 20px lightgray;
+}
+main h1, main h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+main h2 {
+    margin-top: .5em;
+}
+main p {
+    margin-bottom: 1em;
+}
+#login h2 {
+    text-align: center;
+}
+#login {
+    text-align: center;
+    padding: 1.5em;
+    width: 600px;
+    min-height: 300px;
+    margin-top: 2em;
+    margin-bottom: 150px;
+}
+
+#login input {
+    text-align: left;
+    height: 2em;
+    width: 220px;
+    display: block;
+    margin: 1em 0 1em 34%;
+}
+#login button, #register button {
+    margin: 3em 7   em;
+    width: 150px;
+    background: lightblue;
+    padding: 7px;
+    border-color: darkgray;
+}
+#login button:hover, #register button:hover {
+    box-shadow: 6px 8px 15px gray;
+    border-color: darkgray;
+}
+#login select {
+    width: 10em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+#login a {
+    color: purple;
+
+}
+#login p {
+    margin-top: 6em;
+}
+#login a:hover {
+    color: slategray;
+}
+input:required {
+    border: 1px solid red;
+}
+input:valid {
+    border: 1px solid black;
+}
+.required {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    color: red;
+}
+#register {
+    text-align: center;
+    min-height: 20em;
+    margin-bottom: 110px;
+}
+
+#register input, #register select {
+    width: 12em;
+    margin-bottom: 1.25em;
+}
+input span {
+    color: red;
+}
+
+ th button {
+     width: 100%;
+     padding: 5px 0px;
+     background-color: gray;
+    color: white;
+    height: 60px;
+    transition: .8s all linear;
+ }
+ th button:hover {
+     background-color: white;
+     color: black;
+     border: 1px solid purple;
+ }
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+}
+main[id="symptoms"] {
+    min-height: fit-content;
+    width: 50vw;
+    text-align: center;
+}
+#symptoms p{
+text-align: center;
+}
+
+#symptomList ul {
+    margin: auto;
+    width: 80%;
+    text-align: left;
+}
+ul input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+#symptomList li {
+    text-align: left;
+    display: inline;
+    margin: 0 10px 15px 0;
+}
+
+.symptomEntry {
+    line-height: .75em;
+    padding: 20px;
+    width: 50%;
+    margin: 10px auto 10px auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px black,
+    -5px -5px 5px gray;
+}
+.symptomEntry button, #symptomButton {
+    padding: 5px 10px;
+    transition: .7s all linear;
+}
+.symptomEntry button:hover, #symptomButton:hover {
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px darkred;
+
+    background-color: maroon;
+    color: white;
+}
+.symptomEntry input[type="datetime"] {
+    text-align: center;
+    font-size: 110%;
+    border: none;
+    box-shadow: 2px 2px 5px darkgray;
+    margin-bottom: 10px;
+}
+.symptomHeader {
+    font-size: 110%;
+    color: maroon;
+}
+ div.symptomHeader p {
+    text-align: left;
+}
+.asc {
+
+}
+
+.desc {
+    
+}

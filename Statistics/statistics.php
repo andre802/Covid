@@ -1,7 +1,7 @@
 <?php 
     require('../src/database.php');
 
-    $query = 'Select * from covid19_tests_performed_by_state_1 order by state';
+    $query = 'Select * from covid19_tests_performed_by_state_1_ order by state';
     $statement1 = $db->prepare($query);
     $statement1->execute();
     $results = $statement1->fetchAll();
@@ -42,7 +42,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Things Covid</title>
 </head>
-<body>
+<body class="background">
     <header>
         <nav>
             <span id="logo"></span>
@@ -50,7 +50,6 @@
                 <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="statistics.php" id="current">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li>
                      <?php
             if ($name != NULL) {
@@ -77,6 +76,7 @@
     </aside>
     <main id="statistics">
         <table id="statisticsTable">
+            <figcaption>Last Updated: 11/24/2020. Data retrieved from CDC website.</figcaption>
             <tr>
                 <th><button id="stateOrder">
                      State/Territory</button></th>

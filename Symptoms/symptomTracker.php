@@ -34,5 +34,5 @@
             $updateS->closeCursor();
         }
     }
-    include("../Index/index.html");
+    include("./symptoms.php");
 ?>

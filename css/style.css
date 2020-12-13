@@ -40,20 +40,18 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: lightblue;
-    padding: 10px;
+
 }
 nav a:hover {
     text-decoration: underline;
-    color: purple;
-    background-color: gray;
-    border-radius: 5px;
+    color: rgb(230, 191, 230);
 }
 nav a:active {
     font-weight: bold;
 }
 #current {
     text-decoration: underline;
-    color: orange;
+    color: rgb(6, 129, 6);
 
     font-size: 1.1em;
 }
@@ -92,6 +90,7 @@ main h2 {
     margin-top: .5em;
 }
 main p {
+    line-height: 1.7;
     margin-bottom: 1em;
 }
 #login h2 {
@@ -242,10 +241,15 @@ ul input[type="checkbox"] {
  div.symptomHeader p {
     text-align: left;
 }
-.asc {
+#news {
+    margin: 0 auto;
+    width: 90%;
+    float: none;
 
 }
-
-.desc {
-    
+figcaption {
+    text-align: center;
+}
+.background{
+	background: url(../Quiz/images/backgroundvirustransp.png) repeat;
 }

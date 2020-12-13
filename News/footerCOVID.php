@@ -1,7 +1,5 @@
 <?php
 
-	include ('../src/database.php');
-	$title = "News";
 
 ?>
 

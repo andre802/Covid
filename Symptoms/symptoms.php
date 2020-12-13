@@ -43,7 +43,6 @@
                 <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="symptoms.php" id="current">Symptom Checker</a></li>
                 <li><a href="../Statistics/statistics.php">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li id="loginLink">
                 <?php
             if ($name != NULL) {
@@ -67,9 +66,8 @@
         <li>Look Out For One Another!</li>
         </ol>
     </aside>
-    <main id="symptoms">
+    <main class="background" id="symptoms">
        <h1>Symptom Checker</h1>
-       <p>Should you seek a test or medical treatment? Take this to find out</p>
        <?php if($name != null) {
            ?>
             <form id="symptomTracker" method="POST" action="symptomTracker.php">
@@ -94,8 +92,8 @@
                         ?><span class="person">
                             <p><?php echo $person["firstName"];?>
                             <span><?php echo substr($person["lastName"],0,1)?></span>
-                            <span><?php echo $person["zipCode"]?></span>
-                            <input type="checkbox" value="<?php echo $person['firstName']; echo $person['lastName']?>"
+                            <span><?php if ($person["zipCode"]) { echo $person["zipCode"]; };?></span>
+                            <input type="checkbox" value="<?php echo $person['firstName']; echo $person['lastName']?>">
                             <br>    
                         </p>
                             </span>

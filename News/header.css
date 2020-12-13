@@ -1,7 +1,9 @@
 ﻿main {
     padding-left: 2%;
 }
-
+ul {
+    width: 
+}
 a.highlight {
     text-decoration: none;
     position: sticky;
@@ -53,7 +55,9 @@ a.highlight {
     border-top: 2px solid black;
     border-bottom: 1px solid darkorange;
 }
-
+ul li {
+    list-style-type: none;
+}
     #nav_menu ul li a.selected:visited {
         color: gold;
     }
@@ -103,7 +107,6 @@ a.highlight {
     width: 0%;
     padding-left: 3000px;
     margin-left: -3000px;
-    overflow: auto;
 }
 
 #header_menu.show {
@@ -130,7 +133,9 @@ a.highlight {
 }
 
 #slidebtn.moveRight{
-    left: 90px;
+    left: 120px;
+    opacity: .9;
+    background-color: white;
 }
 
     #slidebtn:hover {

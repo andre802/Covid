@@ -8,12 +8,15 @@ $statement -> bindValue(':email', $email);
 $statement -> execute();
 $passwordResult = $statement->fetch(PDO::FETCH_NUM);
 $statement -> closeCursor();
-if ($password = $passwordResult[0]):
+if (!$passwordResult){
+    include("../Index/index.php");
+} else if ($password == $passwordResult[0]) {
     $update = 'Update profiles set loggedIn = True where password = :password';
     $statement2 = $db->prepare($update);
     $statement2->bindValue(':password', $password);
     $statement2->execute();
     $statement2->closeCursor();
-    include("../Index/index.php");
-endif;
+    
+} 
+include('../Index/index.php')
 ?>

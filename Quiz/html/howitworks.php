@@ -5,20 +5,30 @@ $loggedInQuery = 'Select firstName from profiles where loggedIn = True';
     $statement->execute();
     $name = $statement->fetch();
 	$statement->closeCursor();
-
 ?>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>How does it work?</title>
-        <link rel="shortcut icon" href="../images/faviconCOVID.ico">
-		<link rel="stylesheet" href="../css/howitworks.css">
-		<link href="../css/header.css">
+        <link rel="shortcut icon" href="../../News/faviconCOVID.ico">
+		<link rel="stylesheet" href="../css/howitworks.css" />
     </head>
     <body>
-	<main class="background">
+		<header>
+			<?php include 'headerCOVID.php' ;?>
+			<nav id="nav_menu">
 			
+				<ul>
+					<li><a class="selected" href="howitworks.php">Coronavirus [U]: Learn</a> </li>
+					<li><a href="quiz.php">Coronavirus [U]: Quiz</a> </li>
+				</ul>
+			</nav>
+			<nav id="header_menu">
+				
+			</nav>	
+		</header>         
+        <main class="background">
+			<h1>How does it work?</h1>
 			<img src="../images/sarscovid2.gif" alt="sars covid 2 gif" class="movepicright" width="270">
 			<h2>Where does the virus get it's name?</h2>
 			<ul>
@@ -152,11 +162,10 @@ $loggedInQuery = 'Select firstName from profiles where loggedIn = True';
 				<li>Lipids are fats that are connected by disulfied bonds, and regular soap break disulfied bonds and denatures lipids.</li>
 				<li>In addition to destroying the viruses fatty envelop, the mechanical washing rips away the virus from the surface of your hands.</li>
 			</ul>
-			<a href="quiz.html">Test What You've Learned!</a> 
 			
 		</main>
 		<footer>
-            <p>&copy; 2019</p>
-        </footer>
+			<?php include('../../News/footerCOVID.php'); ?>
+		</footer>
     </body>
 </html>

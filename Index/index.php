@@ -18,17 +18,29 @@
 </head>
 <body>
     <header>
+		
+		<div id="slidebtn" onclick="closeNav(this)">&#x2261;</div>
+		<nav id="header_menu">
+			<ul>
+				<li><a href="../Index/index.php">Home</a></li>
+				<li><a href="../Quiz/html/howitworks.php">Learn About COVID-19</a></li>
+				<li><a href="../Comments/article.php">Entertainment While Social Distancing</a></li>
+				<li><a href="../News/newsCOVID.php">News &amp Updates</a></li>
+				<li><a href="../Symptoms/symptoms.php">Contact Tracing</a></li>
+			</ul>
+		</nav>
+	</header>
+    <header>
         <nav>
             <span id="logo"></span>
             <ul>
                 <li><a href="../Index/index.php" id="current">Home</a></li>
                 <li><a href="../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="../Statistics/statistics.php">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li id="loginLink">
                 <?php
             if ($name != NULL) {
-                ?><a href="../Login/logout.php">
+                ?><a title="Logout?" href="../Login/logout.php">
                 <?php echo "Hello $name[0]";?>
                 </a>
             <?php } else { 
@@ -48,18 +60,17 @@
         <li>Look Out For One Another!</li>
         </ol>
     </aside>
-    <main>
+    <main class="background">
         <h1>All Things Covid</h1>
         <h2>Stay Informed</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu massa at elit suscipit convallis. Proin pulvinar porttitor tellus eu convallis. Sed placerat auctor ipsum vitae eleifend. Proin id odio tristique, bibendum augue a, hendrerit ex. Cras iaculis, augue non tincidunt molestie, leo mauris scelerisque neque, vitae gravida mi nulla in dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris a pharetra enim. Nam mollis lorem sit amet vulputate fringilla. Mauris arcu lorem, placerat convallis dui vitae, vulputate lacinia nibh. Pellentesque imperdiet metus id velit sollicitudin rhoncus. Nullam elementum, purus sed fringilla tristique, eros felis volutpat dolor, eu laoreet lacus augue vel orci. Aliquam id leo massa. Integer diam sem, feugiat at feugiat a, semper ut tortor.
+        <p>COVID-19 is a disease called SARS-CoV-2. With a vaccine still months away and the number of cases continuing to rise across the United States, it is important to stay aware. Misinformation floats around seemingly easier than the virus, so it is imperative to stay focused on the facts and listen to those who gain the least. COVID-19 seems to cause a number of symptoms with the specificity and intensity of the symptoms often ranging considerably between people. Despite this, there are three that are the most prevalent, a fever, coughing, and shortness of breath. If you wish you take a symptom assessment and track your symptoms, you can do so <a href="../Symptoms/symptoms.php">here.</a></p>
         <br>        
-        <a href="../Quiz/html/howitworks.html">Learn More, Test Your Knowledge</a>
     </p>
         <h2>Stay Healthy</h2>
-        <p>Integer venenatis at erat vitae sagittis. Proin eget velit cursus, suscipit velit eget, convallis justo. Sed quis lectus porta, venenatis dui vel, elementum ipsum. In nec purus mollis erat aliquam pretium. Maecenas sodales rutrum felis eget dapibus. Ut faucibus ultricies turpis, ut tempor nulla. Cras ac risus at magna tincidunt malesuada. Integer a nunc a magna dignissim congue. Suspendisse imperdiet metus ligula, id commodo tortor feugiat quis. Nam euismod quam porttitor, posuere magna et, semper erat. Vivamus nec metus consectetur, iaculis tortor vitae, porta dui. Etiam accumsan commodo arcu. In ac dignissim elit. Morbi laoreet diam vel ligula lobortis, gravida placerat dui faucibus. Nulla convallis turpis in est pellentesque, et cursus ante scelerisque.
-        </p>
+    <p>Despite the alarming number of cases, it is imperative that we do our part to slow the spread of COVID-19 and protect the ones around us. This is achieved by washing our hands with soap and warm water, wearing a mask, and staying at least 6 feet away from people you don't live with, whenever possible. While some of us may catch this virus and not develop symptoms, that is all the more reason to do the minimum and protect ourselves and others.
+    </p>
         <h2>Stay Hopeful</h2>
-        <p>Donec eu nunc metus. Donec vel est libero. Mauris nec augue consequat risus iaculis placerat eget nec sem. Donec sagittis, orci at vestibulum condimentum, magna augue pretium neque, et cursus urna elit sed arcu. Nam dolor arcu, sagittis eget felis nec, dignissim sodales nibh. Quisque tincidunt, tortor in pulvinar venenatis, risus mauris bibendum mi, et tristique sem magna a sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in dapibus enim.
+        <p>With time creeping towards a year since we were informed of the disease, our knowledge has improved. A number of vaccines are in their third phase of development, meaning they are being tested on a significantly large number of people to certify its safety and efficiency. While these announcements shouldn't give us a false sense of security and cause a lax in our precautions, it provides hope and for that it is important Click <a href="../Quiz/html/howitworks.php">here</a> to learn more.        
         </p>
     </main>
 </body>

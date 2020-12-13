@@ -103,7 +103,6 @@ a.highlight {
     width: 0%;
     padding-left: 3000px;
     margin-left: -3000px;
-    overflow: auto;
 }
 
 #header_menu.show {
@@ -130,7 +129,9 @@ a.highlight {
 }
 
 #slidebtn.moveRight{
-    left: 90px;
+    left: 120px;
+    opacity: .9;
+    background-color: white;
 }
 
     #slidebtn:hover {

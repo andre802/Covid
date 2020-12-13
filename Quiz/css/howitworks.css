@@ -1,23 +1,36 @@
 body {
     font-family: Arial;
+    background-color:lightgrey;
+}
+
+main {
     font-size: 95%;
-	margin: 0 auto;
-	max-width: 1060px;
-	background-color: white;
 	border: 2.5px solid red;
 	box-shadow: 0px 0px 20px 10px black; 
 	}
 
-
 main { 
-	padding-top: 0.5em;
-	padding-right: 1.5em;
-	padding-left: 1.5em;
-	padding-bottom: 40em;
-    float: left; 
+	margin-left: 10% ;
+	margin-right: 10% ;
+	padding-top: 2%;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-bottom: 2%;
 }
-main h1 { font-size: 170%; }
-main h2 { font-size: 130%; }
+main h1 {
+	background: url(../images/virusheader2.jpg);
+	background-size: cover;
+	color: white;
+	text-shadow: 1px 1px 0px black;
+    opacity: 1;
+    text-align: center;
+    margin-right: 15%;
+    margin-left: 15%;
+	}
+main h2 {     
+	font-style: italic;
+	}
+	
 .movepicright{
 	float: right;
 	padding: 2em;
@@ -28,22 +41,4 @@ main h2 { font-size: 130%; }
 }
 .background{
 	background: url(../images/backgroundvirustransp.png) repeat;
-}
-
-a { 
-	color: steelblue; 
-	font-weight: bold; 
-	font-size: 200%;
-	text-align: center;
-	padding:4em;
-	}
-
-footer { 
-	clear: both;
-	text-align: center; 
-	color: white;
-	background-color: red;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
-	font-size: 88%; 
 }

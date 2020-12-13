@@ -1,5 +1,5 @@
 <?php
-    require_once('database.php');
+    require_once('../src/database.php');
     $loggedInQuery = 'SELECT * from profiles where loggedIn = True';
     $statement = $db->prepare($loggedInQuery);
     $statement->execute();
@@ -7,7 +7,7 @@
     $statement->closeCursor();
     
     // Get all comments
-    $query = 'SELECT * FROM comments ORDER BY commentID';
+    $query = 'SELECT * FROM comments ORDER BY time desc';
     $statement2 = $db->prepare($query);
     $statement2->execute();
     $comments = $statement2->fetchAll();
@@ -34,31 +34,44 @@
         <meta charset="utf-8">
         <title>Things to keep you entertained during quarantine</title>
         <link rel="stylesheet" type="text/css" href="../News/virusCSS.css">
-        <link rel="stylesheet" href="article.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../News/header.css">        
-    </head>
-     <header>
+        <link rel="stylesheet" type="text/css" href="article.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+            .button {
+                padding: 7px;
+                border-radius: 4px;
+                margin-right: 3px;
+            }
+            form p {
+                width: 60%;
+                margin: 0 auto;
+            }
+            form {
+                padding: 10px;
+                box-shadow: 2px 2px 5px black;
+                 margin: 0 auto;
+            }
+        </style>
+            </head>
+    <body class="background">
         <nav>
             <span id="logo"></span>
             <ul>
-                <li><a href="../Index/index.php" id="current">Home</a></li>
+                <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="../Statistics/statistics.php">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
-                <li>  <?php
+                <li id="loginLink">
+                <?php
             if ($user != NULL) {
-                ?><a href="logout.php">
-                <?php echo "Hello, $user[0]!";?>
+                ?><a href="../Login/logout.php">
+                <?php echo "Hello $user[firstName]"?>
                 </a>
             <?php } else { 
-                ?><a href="loginForm.php">
+                ?><a href="../Login/loginForm.php">
                 <?php echo 'Log In'; }?>
                 </a></li>
             </ul>
         </nav>
-    </header>
-    <body>
         <?php include('../News/headerCOVID.php'); ?>
         <article>
             <h1>Things to keep you entertained during quarantine</h1>
@@ -101,6 +114,7 @@
                         <span class="username"><?php echo $comment['username']; ?></span> <?php echo getTime($comment['time']); ?>
                         <p><?php echo $comment['content']; ?></p>
                         <input type="hidden" name="comment_id" value="<?php echo $comment['commentID']; ?>">
+                        <input type="hidden" name="user_id" value="<?php echo $user['profileID']; ?>">
                         <input class="button" type="submit" name="like" value="Like"><?php echo $comment['likes']; ?>
                         <input class="button" type="submit" name="like" value="Dislike"> <?php echo $comment['dislikes']; ?>
                         <?php if ($comment['userID'] == $user['profileID'] ) {?>
@@ -112,4 +126,4 @@
         </article>
         <?php include('../News/footerCOVID.php'); ?>
     </body>
-</html>
+</html> 

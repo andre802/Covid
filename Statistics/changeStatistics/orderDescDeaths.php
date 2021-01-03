@@ -31,7 +31,6 @@
                 <li><a href="../../Index/index.php">Home</a></li>
                 <li><a href="../../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="../statistics.php" id="current">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li>
                      <?php
            if ($name != NULL) {

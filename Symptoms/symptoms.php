@@ -23,7 +23,6 @@
             $statement3->closeCursor();
 
         }
-                 require("../News/headerCovid.php");
 
          
 ?>
@@ -43,7 +42,6 @@
                 <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="symptoms.php" id="current">Symptom Checker</a></li>
                 <li><a href="../Statistics/statistics.php">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li id="loginLink">
                 <?php
             if ($name != NULL) {
@@ -156,6 +154,5 @@
        </span>
     </main>
 </body>
-<footer><?php include('../News/footerCovid.php'); ?></footer>
 
 </html>

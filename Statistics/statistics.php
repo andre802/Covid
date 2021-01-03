@@ -31,7 +31,6 @@
     $statement2->execute();
     $name = $statement2->fetch();
     $statement2->closeCursor();
-        require("../News/headerCovid.php");
 
 ?>
 <!DOCTYPE html>
@@ -50,7 +49,6 @@
                 <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="statistics.php" id="current">Statistics</a></li>
-                <li><a href="#">Shop</a></li>
                 <li>
                      <?php
             if ($name != NULL) {
@@ -127,7 +125,6 @@
                 
             
         </script>
-        <footer><?php include('../News/footerCovid.php'); ?></footer>
 
 </body>
 

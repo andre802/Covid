@@ -7,8 +7,7 @@ html {
     margin: 0 auto;
     width: 90%;
     min-width: 750px;
-    box-shadow: 10px 10px 10px black,
-    -10px -10px 15px black;
+    box-shadow: 10px 10px 10px black, -10px -10px 15px black;
     margin-top: 25px;
     border-radius: 10px;
 }
@@ -17,18 +16,18 @@ nav {
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../News/picCOVIDlarge.jpg");
     width: 100%;
-    height: 100px;
     border-bottom: 1px solid black;
     font-size: 1.05em;
     margin-bottom: 10px;
 }
+
 nav ul {
     padding: 20px;
     list-style-type: none;
-    float: right;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -37,24 +36,27 @@ nav ul li {
     font-weight: bold;
     padding: 8px;
 }
+
 nav a {
     text-decoration: none;
     color: lightblue;
-
 }
+
 nav a:hover {
     text-decoration: underline;
-    color: rgb(230, 191, 230);
+    color: purple;
 }
+
 nav a:active {
     font-weight: bold;
 }
+
 #current {
     text-decoration: underline;
-    color: rgb(6, 129, 6);
-
+    color: orange;
     font-size: 1.1em;
 }
+
 aside {
     float: left;
     min-width: 7%;
@@ -64,13 +66,12 @@ aside {
     margin: .5em 1em 0 2em;
     font-size: 125%;
 }
-aside li:hover {
-    font-size: 115%;
-}
+
 aside span {
     color: red;
     font-size: 130%;
 }
+
 main {
     min-width: 30%;
     width: 50%;
@@ -79,27 +80,31 @@ main {
     margin-right: 6em;
     border-radius: 5px;
     border: 1px solid darkslategrey;
-    box-shadow: 5px 8px 10px gray,
-     -20px -10px 20px lightgray;
+    box-shadow: 5px 8px 10px gray, -20px -10px 20px lightgray;
 }
-main h1, main h2 {
+
+main h1,
+main h2 {
     text-align: center;
     margin-bottom: 1em;
 }
+
 main h2 {
     margin-top: .5em;
 }
+
 main p {
     line-height: 1.7;
     margin-bottom: 1em;
 }
+
 #login h2 {
     text-align: center;
 }
+
 #login {
     text-align: center;
     padding: 1.5em;
-    width: 600px;
     min-height: 300px;
     margin-top: 2em;
     margin-bottom: 150px;
@@ -110,87 +115,99 @@ main p {
     height: 2em;
     width: 220px;
     display: block;
-    margin: 1em 0 1em 34%;
+    margin: 1em auto;
 }
-#login button, #register button {
-    margin: 3em 7   em;
+
+#login button,
+#register button {
+    margin: 3em 7 em;
     width: 150px;
     background: lightblue;
     padding: 7px;
     border-color: darkgray;
 }
-#login button:hover, #register button:hover {
+
+#login button:hover,
+#register button:hover {
     box-shadow: 6px 8px 15px gray;
     border-color: darkgray;
 }
+
 #login select {
     width: 10em;
     margin-bottom: 1em;
     text-align: center;
 }
+
 #login a {
     color: purple;
-
 }
+
 #login p {
     margin-top: 6em;
 }
+
 #login a:hover {
     color: slategray;
 }
+
 input:required {
     border: 1px solid red;
 }
+
 input:valid {
     border: 1px solid black;
 }
+
 .required {
     display: block;
     width: 250px;
     margin: 0 auto;
     color: red;
 }
+
 #register {
     text-align: center;
     min-height: 20em;
     margin-bottom: 110px;
 }
 
-#register input, #register select {
+#register input,
+#register select {
     width: 12em;
     margin-bottom: 1.25em;
 }
+
 input span {
     color: red;
 }
 
- th button {
-     width: 100%;
-     padding: 5px 0px;
-     background-color: gray;
+th button {
+    width: 100%;
+    padding: 5px 0px;
+    background-color: gray;
     color: white;
     height: 60px;
     transition: .8s all linear;
- }
- th button:hover {
-     background-color: white;
-     color: black;
-     border: 1px solid purple;
- }
+}
+
+th button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid purple;
+}
+
 td {
     border: 1px solid black;
     padding: 5px;
 }
+
 table {
     border-collapse: collapse;
 }
-main[id="symptoms"] {
-    min-height: fit-content;
-    width: 50vw;
+
+#symptoms p {
     text-align: center;
-}
-#symptoms p{
-text-align: center;
 }
 
 #symptomList ul {
@@ -198,9 +215,11 @@ text-align: center;
     width: 80%;
     text-align: left;
 }
+
 ul input[type="checkbox"] {
     margin-bottom: 15px;
 }
+
 #symptomList li {
     text-align: left;
     display: inline;
@@ -213,20 +232,23 @@ ul input[type="checkbox"] {
     width: 50%;
     margin: 10px auto 10px auto;
     border: 2px solid black;
-    box-shadow: 5px 5px black,
-    -5px -5px 5px gray;
+    box-shadow: 5px 5px black, -5px -5px 5px gray;
 }
-.symptomEntry button, #symptomButton {
+
+.symptomEntry button,
+#symptomButton {
     padding: 5px 10px;
     transition: .7s all linear;
 }
-.symptomEntry button:hover, #symptomButton:hover {
+
+.symptomEntry button:hover,
+#symptomButton:hover {
     border-radius: 5px;
     box-shadow: 2px 2px 4px darkred;
-
     background-color: maroon;
     color: white;
 }
+
 .symptomEntry input[type="datetime"] {
     text-align: center;
     font-size: 110%;
@@ -234,22 +256,22 @@ ul input[type="checkbox"] {
     box-shadow: 2px 2px 5px darkgray;
     margin-bottom: 10px;
 }
+
 .symptomHeader {
     font-size: 110%;
     color: maroon;
 }
- div.symptomHeader p {
+
+div.symptomHeader p {
     text-align: left;
 }
+
 #news {
     margin: 0 auto;
     width: 90%;
     float: none;
-
 }
+
 figcaption {
     text-align: center;
-}
-.background{
-	background: url(../Quiz/images/backgroundvirustransp.png) repeat;
 }

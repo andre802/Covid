@@ -23,7 +23,6 @@
             $statement3->closeCursor();
 
         }
-                 require("../News/headerCovid.php");
 
          
 ?>
@@ -154,6 +153,5 @@
        </span>
     </main>
 </body>
-<footer><?php include('../News/footerCovid.php'); ?></footer>
 
 </html>

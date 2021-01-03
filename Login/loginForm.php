@@ -4,7 +4,6 @@
     $statement->execute();
     $name = $statement->fetch();
     $statement->closeCursor();
-    include("../News/headerCovid.php");
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,12 @@
                 <li><a href="../Index/index.php">Home</a></li>
                 <li><a href="../Symptoms/symptoms.php">Symptom Checker</a></li>
                 <li><a href="../Statistics/statistics.php">Statistics</a></li>
+<<<<<<< HEAD
                 <li>  <?php
+=======
+                <li>
+                <?php
+>>>>>>> solo
             if ($name != NULL) {
                 ?><a href="logout.php" id="current">
                 <?php echo "Hello, $name[0]!";?>
@@ -57,6 +61,5 @@
         <script rel="script" src="./../src/validation.js"></script>
 
 </body>
-    <?php include('../News/footerCovid.php'); ?>
 
 </html>

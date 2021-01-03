@@ -31,7 +31,6 @@
     $statement2->execute();
     $name = $statement2->fetch();
     $statement2->closeCursor();
-        require("../News/headerCovid.php");
 
 ?>
 <!DOCTYPE html>
@@ -127,7 +126,6 @@
                 
             
         </script>
-        <footer><?php include('../News/footerCovid.php'); ?></footer>
 
 </body>
 

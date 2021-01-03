@@ -24,30 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `commentID` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL DEFAULT 'Guest',
-  `userID` int(11) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT current_timestamp(),
-  `content` text NOT NULL,
-  `likes` int(11) NOT NULL DEFAULT 0,
-  `dislikes` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`commentID`, `username`, `userID`, `time`, `content`, `likes`, `dislikes`) VALUES
-(4, 'Justin Reeves', 1, '2020-11-24 08:05:10', 'Hello', 1, 0),
-(5, 'Justin Reeves', 1, '2020-11-24 08:07:51', 'I started a new book today', 0, 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `profiles`
 --
 
@@ -198,40 +174,6 @@ INSERT INTO `united_states_covid19_cases_and_deaths_by_state__1_` (`State/Territ
 ('Wyoming', 28169, '24309', '3860', 5675, 4876, 176, '176', '0', 32, 30, '140.3', '0.8'),
 ('United States of America', 12175921, '5660425', '431870', 1191520, 3722, 255958, '144237', '13848', 10496, 78, '52.0', '0.5');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `usercommentrating`
---
-
-CREATE TABLE `usercommentrating` (
-  `ratingID` int(11) NOT NULL,
-  `commentID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `liked` int(11) NOT NULL DEFAULT 0,
-  `disliked` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `usercommentrating`
---
-
-INSERT INTO `usercommentrating` (`ratingID`, `commentID`, `userID`, `liked`, `disliked`) VALUES
-(1, 3, 1, 1, 0),
-(2, 4, 2, 1, 0),
-(3, 5, 1, 0, 0),
-(4, 8, 1, 0, 0);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`commentID`);
-
 --
 -- Indexes for table `profiles`
 --
@@ -239,21 +181,7 @@ ALTER TABLE `profiles`
   ADD PRIMARY KEY (`profileID`),
   ADD UNIQUE KEY `email` (`email`);
 
---
--- Indexes for table `usercommentrating`
---
-ALTER TABLE `usercommentrating`
-  ADD PRIMARY KEY (`ratingID`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -261,12 +189,7 @@ ALTER TABLE `comments`
 ALTER TABLE `profiles`
   MODIFY `profileID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
---
--- AUTO_INCREMENT for table `usercommentrating`
---
-ALTER TABLE `usercommentrating`
-  MODIFY `ratingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
